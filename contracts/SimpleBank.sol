@@ -37,10 +37,10 @@ contract SimpleBank {
         _;
     }
 
-    function register(address payable _holder) notHolder public returns (bool) {
-        holders[_holder] = true;
-        emit NewRegistration(_holder);
-        return holders[_holder];
+    function register() notHolder public returns (bool) {
+        holders[msg.sender] = true;
+        emit NewRegistration(msg.sender);
+        return holders[msg.sender];
     }
 
     function deposit() isOwner onlyHolder public payable {
