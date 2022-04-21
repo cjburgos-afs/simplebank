@@ -4,6 +4,11 @@
   "description": "",
   "main": "createBankAccount.js",
   "scripts": {
+    "bank-deposits":"node getdeposits.js",
+    "balance":"node getbalance.js",
+    "register": "node register.js",
+    "deposit": "node deposit.js",
+    "withdraw": "node withdraw.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
